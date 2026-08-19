@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickSM - Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Style/base.css">
+    <link rel="stylesheet" href="../Style/main.css">
+    <link rel="stylesheet" href="../Style/auth.css">
+    <link rel="stylesheet" href="../Style/account.css">
+</head>
+<body>
+    <script>
+        if (!localStorage.getItem('quicksm_currentUser')) {
+            window.location.href = 'auth.html';
+        }
+    </script>
+    <div class="auth-container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="main.html">
+                <i class="fa-solid fa-chart-line me-2"></i>QuickSM
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="trade.html"><i class="fa-solid fa-cart-shopping me-1"></i> Buy Stocks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deposit-withdraw.html"><i class="fa-solid fa-money-bill-transfer me-1"></i> Deposit/Withdraw</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring me-1"></i> Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html"><i class="fa-solid fa-newspaper me-1"></i> News</a></li>
+                </ul>
+                <div class="d-flex gap-2" id="authSection"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="account-card text-center">
+                    <div class="profile-pic">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <h3 class="profile-name" id="profileName">Demo User</h3>
+                    <p class="profile-email text-muted" id="profileEmail">demo@quicksm.com</p>
+                </div>
+
+                <div class="account-card">
+                    <h5 class="mb-4">Edit Profile</h5>
+                    <form id="account-form">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--color-bg); border-color: var(--color-border); color: var(--color-text-secondary);"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control" id="editName" placeholder="John Doe">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--color-bg); border-color: var(--color-border); color: var(--color-text-secondary);"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="editEmail" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">New Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: var(--color-bg); border-color: var(--color-border); color: var(--color-text-secondary);"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" class="form-control" id="editPassword" placeholder="Leave blank to keep current">
+                            </div>
+                            <div class="form-text text-muted">Leave blank if you don't want to change your password.</div>
+                        </div>
+                        <div class="d-flex gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary flex-fill"><i class="fa-solid fa-check me-1"></i> Save Changes</button>
+                            <button type="button" class="btn btn-outline-secondary flex-fill" id="discardBtn"><i class="fa-solid fa-xmark me-1"></i> Discard Changes</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="account-card">
+                    <h5 class="mb-4">Account Information</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Member Since</div>
+                                    <div class="info-value">August 2026</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Total Trades</div>
+                                    <div class="info-value">142</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Win Rate</div>
+                                    <div class="info-value">68.5%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-star"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Account Level</div>
+                                    <div class="info-value">Gold</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Security</div>
+                                    <div class="info-value">2FA Enabled</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box">
+                                <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Region</div>
+                                    <div class="info-value">Vietnam</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/userData.js"></script>
+    <script src="../script/account.js"></script>
+</body>
+</html>

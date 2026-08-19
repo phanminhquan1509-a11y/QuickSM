@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickSM - Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Style/base.css">
+    <link rel="stylesheet" href="../Style/main.css">
+    <link rel="stylesheet" href="../Style/auth.css">
+    <link rel="stylesheet" href="../Style/settings.css">
+</head>
+<body>
+    <script>
+        if (!localStorage.getItem('quicksm_currentUser')) {
+            window.location.href = 'auth.html';
+        }
+    </script>
+    <div class="auth-container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="main.html">
+                <i class="fa-solid fa-chart-line me-2"></i>QuickSM
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="trade.html"><i class="fa-solid fa-cart-shopping me-1"></i> Buy Stocks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deposit-withdraw.html"><i class="fa-solid fa-money-bill-transfer me-1"></i> Deposit/Withdraw</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html"><i class="fa-solid fa-life-ring me-1"></i> Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html"><i class="fa-solid fa-newspaper me-1"></i> News</a></li>
+                </ul>
+                <div class="d-flex gap-2" id="authSection"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="settings-card">
+                    <h3 class="settings-title">Settings</h3>
+                    <p class="settings-subtitle">Configure your trading preferences</p>
+
+                    <div class="settings-section">
+                        <h6 class="settings-section-title">Trading Preferences</h6>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable algorithmic order routing</div>
+                                <div class="setting-desc">Optimize execution latency through smart order router aggregation</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting1">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Activate latent arbitrage detection</div>
+                                <div class="setting-desc">Monitor cross-venue price dispersion for mean-reversion opportunities</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting2" checked>
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable volatility surface interpolation</div>
+                                <div class="setting-desc">Apply parametric volatility modeling for options pricing adjustments</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h6 class="settings-section-title">Risk Management</h6>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable dynamic hedge ratio rebalancing</div>
+                                <div class="setting-desc">Automatically adjust delta exposure using minimum-variance hedging</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting4" checked>
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Activate stress testing framework</div>
+                                <div class="setting-desc">Run Monte Carlo simulations for tail-risk scenario analysis</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting5">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable liquidity-adjusted VaR</div>
+                                <div class="setting-desc">Incorporate market depth into value-at-risk calculations</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting6" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h6 class="settings-section-title">Market Data</h6>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable order book imbalance clustering</div>
+                                <div class="setting-desc">Detect microstructural patterns in bid-ask liquidity distributions</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting7">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Activate cross-asset correlation mapping</div>
+                                <div class="setting-desc">Leverage multi-asset factor models for portfolio construction</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting8">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable tick-level feature engineering</div>
+                                <div class="setting-desc">Extract high-frequency predictors using wavelet decomposition</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting9" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h6 class="settings-section-title">Execution Optimization</h6>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable participation rate throttling</div>
+                                <div class="setting-desc">Adaptive volume-weighted average price participation algorithms</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting10">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Activate slippage tolerance modeling</div>
+                                <div class="setting-desc">Implement implementation shortfall minimization strategies</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting11">
+                            </div>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-name">Enable dark pool liquidity seeking</div>
+                                <div class="setting-desc">Route non-displayed orders through alternative trading systems</div>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="setting12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/userData.js"></script>
+</body>
+</html>

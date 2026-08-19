@@ -1,0 +1,57 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="300" fill="#131a16" rx="6"/>
+    <rect x="0" y="0" width="400" height="30" fill="#0b0f0e" rx="6"/>
+    <rect x="0" y="0" width="400" height="30" fill="#0b0f0e"/>
+    <rect x="10" y="8" width="8" height="8" rx="2" fill="#f85149"/>
+    <rect x="24" y="8" width="8" height="8" rx="2" fill="#d29922"/>
+    <rect x="38" y="8" width="8" height="8" rx="2" fill="#3fb950"/>
+    <text x="200" y="18" font-family="sans-serif" font-size="11" font-weight="600" fill="#d1ddd7" text-anchor="middle">AAPL - Apple Inc.</text>
+    <text x="340" y="18" font-family="sans-serif" font-size="10" fill="#3fb950" text-anchor="end">+1.24%</text>
+    <rect x="10" y="35" width="120" height="255" fill="#0b0f0e" rx="4"/>
+    <rect x="15" y="42" width="110" height="14" rx="3" fill="#2ea043"/>
+    <text x="70" y="52" font-family="sans-serif" font-size="9" font-weight="600" fill="#0b0f0e" text-anchor="middle">Buy AAPL</text>
+    <rect x="15" y="62" width="110" height="14" rx="3" fill="#f85149"/>
+    <text x="70" y="72" font-family="sans-serif" font-size="9" font-weight="600" fill="#ffffff" text-anchor="middle">Sell AAPL</text>
+    <rect x="15" y="85" width="110" height="100" fill="#131a16" rx="3"/>
+    <text x="25" y="100" font-family="sans-serif" font-size="8" fill="#8fa398">Quantity</text>
+    <rect x="25" y="105" width="95" height="14" fill="#0b0f0e" stroke="#263330" rx="2"/>
+    <text x="25" y="125" font-family="sans-serif" font-size="8" fill="#8fa398">Price</text>
+    <rect x="25" y="130" width="95" height="14" fill="#0b0f0e" stroke="#263330" rx="2"/>
+    <text x="25" y="150" font-family="sans-serif" font-size="8" fill="#8fa398">Total</text>
+    <rect x="25" y="155" width="95" height="14" fill="#0b0f0e" stroke="#263330" rx="2"/>
+    <rect x="25" y="180" width="95" height="20" rx="3" fill="#2ea043"/>
+    <text x="72" y="194" font-family="sans-serif" font-size="10" font-weight="600" fill="#0b0f0e" text-anchor="middle">Place Order</text>
+    <rect x="138" y="35" width="252" height="255" fill="#131a16" rx="4"/>
+    <line x1="148" y1="55" x2="378" y2="55" stroke="#263330" stroke-width="1"/>
+    <line x1="148" y1="55" x2="148" y2="280" stroke="#263330" stroke-width="1"/>
+    <line x1="288" y1="55" x2="288" y2="280" stroke="#263330" stroke-width="1"/>
+    <text x="223" y="48" font-family="sans-serif" font-size="9" fill="#8fa398" text-anchor="middle">Price</text>
+    <text x="333" y="48" font-family="sans-serif" font-size="9" fill="#8fa398" text-anchor="middle">Volume</text>
+    <line x1="148" y1="280" x2="378" y2="280" stroke="#263330" stroke-width="1"/>
+    <line x1="148" y1="55" x2="148" y2="55" stroke="#263330" stroke-width="1"/>
+    <line x1="148" y1="280" x2="378" y2="280" stroke="#263330" stroke-width="1"/>
+    <rect x="148" y="55" width="252" height="255" fill="none"/>
+    <rect x="150" y="57" width="248" height="253" fill="#131a16" rx="0"/>
+    <rect x="150" y="57" width="248" height="3" fill="#263330"/>
+    <rect x="150" y="57" width="248" height="200" fill="#131a16"/>
+    <text x="265" y="310" font-family="sans-serif" font-size="9" fill="#8fa398" text-anchor="middle">1D</text>
+    <text x="295" y="310" font-family="sans-serif" font-size="9" fill="#8fa398" text-anchor="middle">1W</text>
+    <text x="325" y="310" font-family="sans-serif" font-size="9" fill="#d1ddd7" font-weight="600" text-anchor="middle">1M</text>
+    <text x="355" y="310" font-family="sans-serif" font-size="9" fill="#8fa398" text-anchor="middle">1Y</text>
+    <polyline points="165,220 185,210 205,215 225,195 245,200 265,180 285,185 305,165 325,170 345,150 365,155 380,140" fill="none" stroke="#2ea043" stroke-width="1.5"/>
+    <polyline points="165,220 185,210 205,215 225,195 245,200 265,180 285,185 305,165 325,170 345,150 365,155 380,140" fill="url(#area)" opacity="0.15"/>
+    <defs>
+        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2ea043"/>
+            <stop offset="100%" stop-color="#131a16" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <line x1="150" y1="160" x2="398" y2="160" stroke="#263330" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <line x1="150" y1="120" x2="398" y2="120" stroke="#263330" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <line x1="150" y1="200" x2="398" y2="200" stroke="#263330" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <line x1="150" y1="80" x2="398" y2="80" stroke="#263330" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <text x="200" y="20" font-family="sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">$189.84</text>
+    <text x="50" y="275" font-family="sans-serif" font-size="8" fill="#8fa398">Market Price</text>
+    <rect x="15" y="275" width="110" height="12" fill="#3fb950" rx="2"/>
+    <text x="70" y="284" font-family="sans-serif" font-size="8" font-weight="600" fill="#0b0f0e" text-anchor="middle">$189.84</text>
+</svg>

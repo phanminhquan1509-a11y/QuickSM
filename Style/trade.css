@@ -1,0 +1,126 @@
+.trade-dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--color-surface-elevated) 0%, var(--color-surface) 100%);
+    border-top: 1px solid var(--color-border);
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#stockTable th {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-bottom: 2px solid var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#stockTable td {
+    color: var(--color-text);
+    vertical-align: middle;
+}
+
+#stockTable tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+#stockTable tbody tr:hover {
+    background-color: rgba(46, 160, 67, 0.08);
+    transform: translateX(4px);
+}
+
+.table-dark {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--color-text);
+}
+
+.form-select-sm, .form-control-sm {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.form-select-sm:focus, .form-control-sm:focus {
+    background-color: var(--color-bg);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: 0 0 0 0.25rem rgba(46, 160, 67, 0.25);
+}
+
+.btn-outline-danger {
+    color: var(--color-down);
+    border-color: var(--color-border);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--color-down-bg);
+    border-color: var(--color-down);
+    color: var(--color-down);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+    border: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-primary) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 160, 67, 0.3);
+}
+
+#addStockBtn {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #e6b800 100%);
+    border: none;
+    color: #0d1117;
+    font-weight: 600;
+}
+
+#addStockBtn:hover {
+    background: linear-gradient(135deg, #e6b800 0%, var(--color-accent) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(210, 153, 34, 0.3);
+}
+
+.trade-dock .form-label {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+#submitOrder {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #228b3b 100%);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+}
+
+#submitOrder:hover {
+    background: linear-gradient(135deg, #228b3b 0%, var(--color-primary) 100%);
+    box-shadow: 0 4px 15px rgba(46, 160, 67, 0.4);
+}
+
+.text-up {
+    color: var(--color-up) !important;
+    font-weight: 600;
+}
+
+.text-down {
+    color: var(--color-down) !important;
+    font-weight: 600;
+}
+
+#dockPrice, #dockTotal {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
